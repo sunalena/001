@@ -1,0 +1,125 @@
+body{
+  background-image: url(112.png);
+  margin: 0;
+}
+.metro {
+  list-style: none;
+  padding: 0;
+  margin: 0px 0 0 50px;
+  border-left: 5px solid #778899;
+  
+}
+.metro li {line-height: 2em;}
+.metro ul {
+  margin: 20px 0 20px 15px;
+  padding: 0;
+  border: none;
+  list-style: none;
+}
+.metro ul:before, .metro ul:after {
+  content: "";
+  width: 5px;
+  height: 28px;
+  background: #778899;
+  position: relative;
+  display: block;
+  left: -9px;
+}
+#sub_menu_3:before, #sub_menu_3:after {
+  
+   bottom: -1px;
+}
+.metro ul:before {
+  transform: rotate(-45deg);
+  margin-top: -15px;
+}
+.metro ul:after {
+  transform: rotate(45deg);
+  bottom: -20px;
+}
+.metro ul li {border-left: 5px solid #778899;}
+.metro ul li:first-child {
+  margin-top: -5px;
+  padding-top: 5px;
+}
+.metro ul li:last-child {
+  padding-bottom: 10px;
+  margin-bottom: -27px;
+}
+.metro a {
+  text-decoration: none;
+  display: block;
+  font-family: 'Noto Sans', sans-serif;
+  color: #4A4B4D;
+}
+.metro a:before {
+  content: "";
+  display: inline-block;
+  background: #CA682D;
+  width: 12px;
+  height: 12px;
+  left: -9px;
+  position: relative;
+  border-radius: 50%;
+  margin-right: .5em;
+}
+#menu_body{
+	background-color:#DCDCDC; 
+	width: 260px;
+	height: 600px;
+	
+	border-right: 5px solid #c0c0c0;
+	
+}
+
+header {
+	width: 100%;
+	height: 60px;
+	background-color: #708090;
+}
+aside{
+  float: left;
+}
+th {border: none;
+padding: 4px;}
+td {
+  border: 1px solid wheat;
+  border-radius: 8px;
+  background: #D3D3D3;
+  padding: 3px;
+}
+TABLE {
+    /*background: linear-gradient(top right, white, #D3D3D3);*/
+    color: #191970; 
+    font-size: 15px;
+    border-collapse: separate;
+    border-spacing: 4px;
+    background: #ECE9E0;
+    color: #656665;
+    border: 16px solid #ECE9E0;
+    border-radius: 20px;
+    position: absolute;
+   }
+
+.tab1{
+      margin-left: 300px;
+}
+.tab2{
+      margin-left: 800px;
+}
+.tab3{
+  margin: 290px 0 0 300px;
+}
+.tab4{
+  margin: 290px 0 0 800px;
+}
+
+.head a{
+  color: #fff;
+  font-size: 50px;
+  text-decoration: none;
+  padding-left: 15px;
+}
+.table{
+  margin: 10px;
+}
