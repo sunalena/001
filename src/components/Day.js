@@ -11,6 +11,7 @@ const Lesson = props => (
 
 const itemToLesson = item => (
   <Lesson
+    key={item.id}
     time={item.time}
     discipline={item.discipline}
     classroom={item.classroom}
@@ -21,17 +22,19 @@ const itemToLesson = item => (
 const Day = props => (
   <table border="1" className={'tab' + props.id}>
     <caption>{props.day}</caption>
-    <tr>
-      <th>Время</th>
-      <th>
-        Название <br /> пары
-      </th>
-      <th>
-        № <br />кабинета
-      </th>
-      <th>Преподаватель</th>
-    </tr>
-    {props.lessons.map(itemToLesson)}
+    <tbody>
+      <tr>
+        <th>Время</th>
+        <th>
+          Название <br /> пары
+        </th>
+        <th>
+          № <br />кабинета
+        </th>
+        <th>Преподаватель</th>
+      </tr>
+      {props.lessons.map(itemToLesson)}
+    </tbody>
   </table>
 )
 

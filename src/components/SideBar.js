@@ -1,43 +1,37 @@
 import React, { Component } from 'react'
-import { faculties, educationLevels } from '../data/structure'
-
-const itemToLink = item => (
-  <Branch key={item.id} id={item.id} name={item.name} type={item.type} />
-)
+import hierarchy from '../data/hierarchy'
 
 const Branch = class App extends Component {
   state = {
-    isOpen: false,
-    children: undefined
+    current: undefined
   }
 
   handleClick = event => {
-    if (!this.state.isOpen && !this.state.children) {
-      switch (this.props.type) {
-        case 'faculty':
-          this.setState({ children: educationLevels })
-          break
-        case 'educationLevel':
-          this.setState({
-            children: educationLevels.filter(el => el.id === this.props.id)[0]
-              .courses
-          })
-          break
-        default:
-          break
-      }
-    }
-    this.setState({ isOpen: !this.state.isOpen })
+    this.setState({ current: Number(event.target.id) })
   }
 
+  itemToLink = ({ id, name, type }) => (
+    <Branch
+      key={id}
+      id={id}
+      name={name}
+      isOpen={id === this.state.current}
+      type={type}
+      onClick={this.handleClick}
+    />
+  )
+
   render() {
+    const { id, name, onClick, isOpen, type } = this.props
     return (
       <li>
-        <a role="button" onClick={this.handleClick}>
-          {this.props.name}
+        <a id={id} role="button" onClick={onClick}>
+          {name}
         </a>
-        {this.state.isOpen && this.state.children ? (
-          <ul id={this.props.id}>{this.state.children.map(itemToLink)}</ul>
+        {isOpen && type !== 'course' ? (
+          <ul id={id}>
+            {hierarchy.filter(el => el.parent === id).map(this.itemToLink)}
+          </ul>
         ) : null}
       </li>
     )
@@ -47,7 +41,9 @@ const Branch = class App extends Component {
 const SideBar = () => (
   <aside>
     <div id="menu_body">
-      <ul className="metro">{faculties.map(itemToLink)}</ul>
+      <ul className="metro">
+        <Branch key={0} id={0} name={'Структура'} isOpen={true} />
+      </ul>
     </div>
   </aside>
 )
