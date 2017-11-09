@@ -3,20 +3,25 @@ import React, { Component } from 'react'
 import Header from './components/Header'
 import Week from './components/Week'
 import SideBar from './components/SideBar'
-import week from './data/week'
 
-// const days = []
+export default class App extends Component {
+  state = {
+    groupId: undefined
+  }
 
-class App extends Component {
+  getTimeTable = groupId => {
+    this.setState({
+      groupId
+    })
+  }
+
   render() {
     return (
       <div>
         <Header />
-        <Week days={week.days} />
-        <SideBar />
+        <Week groupId={this.state.groupId} />
+        <SideBar getTimeTable={this.getTimeTable} />
       </div>
     )
   }
 }
-
-export default App

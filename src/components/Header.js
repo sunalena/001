@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Header = () => (
+export default () => (
   <header>
     <div className="head">
       <a href="index.html" title="Главная">
@@ -9,5 +9,3 @@ const Header = () => (
     </div>
   </header>
 )
-
-export default Header
