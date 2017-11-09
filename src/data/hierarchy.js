@@ -2,6 +2,8 @@ export default [
   { id: 1, parent: 0, name: 'фмф', type: 'faculty' },
   { id: 2, parent: 1, name: 'бакалавриат', type: 'level' },
   { id: 3, parent: 2, name: '1 курс', type: 'course' },
+  { id: 46, parent: 3, name: '102', type: 'group' },
+  { id: 47, parent: 3, name: '103', type: 'group' },
   { id: 4, parent: 2, name: '2 курс', type: 'course' },
   { id: 5, parent: 2, name: '3 курс', type: 'course' },
   { id: 6, parent: 2, name: '4 курс', type: 'course' },

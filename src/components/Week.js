@@ -1,11 +1,16 @@
-import React from 'react'
+import React, { Component } from 'react'
 
 import Day from './Day'
 
-const itemToDay = el => (
-  <Day key={el.id} id={el.id} day={el.day} lessons={el.lessons} />
+import week from '../data/week'
+
+const itemToDay = ({ id, day, lessons }) => (
+  <Day key={id} id={id} day={day} lessons={lessons} />
 )
 
-const Week = props => props.days.map(itemToDay)
-
-export default Week
+export default class Week extends Component {
+  render() {
+    const groupTimeTable = week.find(el => el.groupId === this.props.groupId)
+    return groupTimeTable ? groupTimeTable.days.map(itemToDay) : null
+  }
+}
