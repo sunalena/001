@@ -41,6 +41,7 @@ body {
   bottom: -20px;
 }
 .metro ul li {
+  padding-bottom: 10px; 
   border-left: 5px solid #778899;
 }
 .metro ul li:first-child {
