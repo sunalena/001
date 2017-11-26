@@ -12,7 +12,7 @@ const Lesson = ({ time, discipline, classroom, teacher }) => (
 const itemToLesson = ({ id, ...rest }) => <Lesson key={id} {...rest} />
 
 export default ({ id, day, lessons }) => (
-  <table border="1" className={'tab' + id}>
+  <table border="1" className=''>
     <caption>{day}</caption>
     <tbody>
       <tr>
