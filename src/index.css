@@ -211,8 +211,6 @@ table {
   display: block;
   position: relative;
   float: left;
-  top:100px;
-  left:260px;
   min-width: 370px;
   
   box-shadow: 5px 5px 20px rgba(0, 0, 0, .4);
