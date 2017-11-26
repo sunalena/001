@@ -19,7 +19,7 @@ export default class App extends Component {
     return (
       <div>
         <Header />
-        <div className="week">
+        <div className="week1">
           <Week groupId={this.state.groupId} />
         </div>
         <SideBar getTimeTable={this.getTimeTable} />
