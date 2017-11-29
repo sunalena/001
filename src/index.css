@@ -189,13 +189,12 @@ td {
   border: 1px solid wheat;
   border-radius: 8px;
   background: #d3d3d3;
-  padding:2px;
+  padding:6px 2px;
   font-family: 'Merriweather', serif;
   font-size: 13px;
 }
-td:first-child {
-  width: 51px;
-}
+
+
 table {
   /*background: linear-gradient(top right, white, #D3D3D3);*/
   color: #191970;
@@ -206,13 +205,13 @@ table {
   color: #656665;
   border: 16px solid #ece9e0;
   border-radius: 20px;
-  margin:30px 20px;
-  
+  margin:30px 50px;
+  table-layout: fixed;
   display: block;
   position: relative;
   float: left;
   min-width: 370px;
-  
+
   box-shadow: 5px 5px 20px rgba(0, 0, 0, .4);
 }
 
@@ -222,10 +221,243 @@ table {
   left: 260px;
 }
 
-h2{
+table h2{
   font-size: 30px;
   font-family: 'Lobster', cursive;
   margin: 0;
   color: rgb(95, 158, 160);
   text-shadow: 1px 1px 2px black, 0 0 1em white;
+}
+
+.drop{
+  z-index: 2;
+  color: black;
+  position: fixed;
+  cursor: pointer;
+}
+
+
+@media screen and (max-width: 1880px){
+  table {
+    margin: 40px;
+  }
+}
+
+@media screen and (max-width: 1820px){
+  table {
+    margin: 25px;
+  }
+}
+
+@media screen and (max-width: 1732px){
+  table {
+    margin: 15px;
+  }
+}
+
+@media screen and (max-width: 1674px){
+  table {
+    margin: 40px 100px;
+  }
+}
+
+@media screen and (max-width: 1545px){
+  table {
+    margin: 40px 70px;
+  }
+}
+
+@media screen and (max-width: 1423px){
+  table {
+    margin: 50px;
+  }
+}
+
+@media screen and (max-width: 1345px){
+  table {
+    margin: 30px;
+  }
+}
+
+@media screen and (max-width: 1250px){
+  table {
+    margin: 5px;
+  }
+}
+@media screen and (max-width: 1200px){
+  table {
+    margin: 40px 170px;
+  }
+}
+
+@media screen and (max-width: 1100px){
+  table {
+    margin: 40px 150px;
+  }
+}
+
+@media screen and (max-width: 990px){
+  table {
+    margin: 40px 70px;
+  }
+}
+
+@media screen and (max-width: 845px){
+  table {
+    margin: 40px;
+  }
+}
+
+@media screen and (max-width: 770px){
+  table {
+    margin: 20px;
+  }
+}
+
+@media screen and (max-width: 725px){
+  table {
+    margin: 20px 5px 0 0;
+  }
+}
+
+@media screen and (max-width: 690px) {
+  .head a{
+    font-size: 25px;
+  }
+  .metro {
+    margin: 0px 0 0 10px;
+  }
+  #menu_body {
+    width: 210px;
+  }
+  aside {
+    width: 195px;
+  }
+  .week1{
+    left: 210px;
+  }
+  table {
+    border: 0;
+  }
+
+
+  table caption {
+    font-size: 1.3em;
+
+  }
+  table thead {
+    display: none;
+  }
+  table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: .625em;
+  }
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: .8em;
+    text-align: right;
+    width: 370px;
+  }
+  table td:before {
+    content: attr(aria-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  table td:last-child {
+    border-bottom: 0;
+  }
+
+  tr .ti::after{
+    content: "Время";
+    float: left;
+  }
+  tr .di::after{
+    content: "Дисциплина";
+    float: left;
+  }
+  tr .cl::after{
+    content: "№ кабинета";
+    float: left;
+  }
+  tr .te::after{
+    content: "Преподаватель";
+    float: left;
+  }
+}
+
+@media screen and (max-width: 600px){
+  table td {
+    width: 300px;
+  }
+
+  table{
+    min-width: 200px;
+  }
+}
+
+@media screen and (max-width: 530px){
+  table td {
+    width: 240px;
+  }
+}
+
+@media screen and (max-width: 470px){
+  table td {
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 440px){
+
+  #menu_body {
+    width: 180px;
+    font-size: 14px;
+  }
+  aside {
+    width: 165px;
+  }
+  .week1{
+    left: 180px;
+  }
+}
+
+@media screen and (max-width: 400px){
+  .metro {
+    margin: 0 0 0 -15px;
+  }
+  #menu_body {
+    width: 150px;
+    font-size: 12px;
+
+  }
+  aside {
+    width: 135px;
+  }
+  .week1{
+    left: 150px;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  #menu_body {
+    height: 95vh;
+
+  }
+}
+@media screen and (max-width: 350px) {
+  #menu_body {
+    height: 100vh;
+
+  }
+}
+
+@media screen and (max-width: 320px) {
+  #menu_body {
+    height: 106vh;
+
+  }
+
 }
