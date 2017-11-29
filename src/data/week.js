@@ -208,7 +208,7 @@ const week = [
         ]
       },
       {
-        id: 4,
+        id: 6,
         day: 'Суббота',
         lessons: [
           {
