@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 import Header from './components/Header'
 import Week from './components/Week'
-import SideBar from './components/SideBar'
+import Dropdown from './components/Dropdown'
 
 export default class App extends Component {
   state = {
@@ -22,7 +22,7 @@ export default class App extends Component {
         <div className="week1">
           <Week groupId={this.state.groupId} />
         </div>
-        <SideBar getTimeTable={this.getTimeTable} />
+        <Dropdown getTimeTable={this.getTimeTable} />
       </div>
     )
   }
