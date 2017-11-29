@@ -20,7 +20,7 @@ export default class App extends Component {
       <div>
         <Header />
         <div className="week1">
-          <Week groupId={this.state.groupId} />
+            {!this.state.groupId ? <Header /> : <Week groupId={this.state.groupId} />}
         </div>
         <Dropdown getTimeTable={this.getTimeTable} />
       </div>
