@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react'
+import { CSSTransitionGroup } from 'react-transition-group'
 
 const uri = window.location.origin
 
@@ -20,7 +21,10 @@ export default class Branch extends PureComponent {
     } else this.setState({ children: [], isOpen: false })
   }
   elToLink = ({ ...props }) => (
-    <Branch key={props.id} getTimeTable={this.props.getTimeTable} {...props} />
+    <Branch 
+      key={props.id}
+      getTimeTable={this.props.getTimeTable} 
+      {...props} />
   )
 
   render() {
@@ -30,9 +34,18 @@ export default class Branch extends PureComponent {
         <a id={id} type={type} role="button" onClick={this.handleClick}>
           {name}
         </a>
+        <CSSTransitionGroup 
+          transitionName="opasweek"
+          transitionEnterTimeout={500}
+          transitionLeaveTimeout={300}>
+
         {this.state.isOpen && type !== 'group' ? (
-          <ul id={id}>{this.state.children.map(this.elToLink)}</ul>
+          <ul id={id}>
+            {this.state.children.map(this.elToLink)}
+          </ul>
         ) : null}
+
+        </CSSTransitionGroup>
       </li>
     )
   }
