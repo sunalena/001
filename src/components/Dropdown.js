@@ -12,7 +12,13 @@ class Dropdown extends Component {
     return (
       <div>
         <div onClick={this.toggleState} className="drop">
-          menu
+          <a href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            меню
+          </a>
         </div>
         {this.state.isOpened && (
           <SideBar getTimeTable={this.props.getTimeTable} />
