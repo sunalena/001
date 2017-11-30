@@ -474,3 +474,44 @@ table h2{
     margin-left: 80px;
   }
 }
+
+
+
+.dropdownMenu-enter {
+  max-height: 0;
+  overflow: hidden;
+}
+
+.dropdownMenu-enter.dropdownMenu-enter-active {
+  max-height: 1000px;
+  transition: max-height 1s cubic-bezier(.05,.44,.2,.81);
+}
+
+.dropdownMenu-leave {
+  max-height: 1000px;
+  overflow: hidden;
+}
+
+.dropdownMenu-leave.dropdownMenu-leave-active {
+  max-height: 0;
+  transition: max-height 1s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+
+.opasweek-enter {
+  opacity: 0.01;
+}
+
+.opasweek-enter.opasweek-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.opasweek-leave {
+  opacity: 1;
+}
+
+.opasweek-leave.opasweek-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
+}
