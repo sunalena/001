@@ -214,12 +214,11 @@ th {
 td {
   border: 0px;
   border-radius: 4px;
-  background: rgba(0,0,0, 0.3);
+  background: rgba(255, 251, 251, 0.425);
   padding:6px 2px;
   font-family: 'Merriweather', serif;
   font-size: 13px;
 }
-
 
 table {
   background: -moz-linear-gradient(#D0ECF4, rgb(83, 106, 110), #D0ECF4);
@@ -238,7 +237,7 @@ table {
   position: relative;
   float: left;
   min-width: 370px;
- max-width: 440px;
+  max-width: 440px;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, .4);
 }
 
@@ -246,7 +245,7 @@ table h2{
   font-size: 30px;
   font-family: 'Lobster', cursive;
   margin: 0;
-  padding: 0 0 30px 0;
+  padding: 0 0 15px 0;
   color: rgb(95, 158, 160);
   text-shadow: 1px 1px 2px black, 0 0 1em white;
 }
@@ -264,7 +263,6 @@ table h2{
   position: fixed;
   cursor: pointer;
 }
-
 
 .drop a {
   position: absolute;
@@ -476,8 +474,6 @@ table h2{
   }
 }
 
-
-
 .dropdownMenu-enter {
   max-height: 0;
   overflow: hidden;
@@ -498,7 +494,6 @@ table h2{
   transition: max-height 1s cubic-bezier(0.22, 0.61, 0.36, 1);
 }
 
-
 .opasweek-enter {
   opacity: 0.01;
 }
@@ -515,4 +510,151 @@ table h2{
 .opasweek-leave.opasweek-leave-active {
   opacity: 0.01;
   transition: opacity 300ms ease-in;
+}
+
+
+.example-one {
+  font-size: 40px;
+  color: #4e4e4e;
+  position: relative;
+  font-weight: bold;
+}
+@keyframes example-one-anim-1 {
+  0% {
+    clip: rect(38px, 450px, 82px, 0);
+  }
+  5.88235% {
+    clip: rect(88px, 450px, 42px, 0);
+  }
+  11.76471% {
+    clip: rect(40px, 450px, 28px, 0);
+  }
+  17.64706% {
+    clip: rect(52px, 450px, 49px, 0);
+  }
+  23.52941% {
+    clip: rect(7px, 450px, 87px, 0);
+  }
+  29.41176% {
+    clip: rect(41px, 450px, 86px, 0);
+  }
+  35.29412% {
+    clip: rect(88px, 450px, 57px, 0);
+  }
+  41.17647% {
+    clip: rect(13px, 450px, 96px, 0);
+  }
+  47.05882% {
+    clip: rect(75px, 450px, 110px, 0);
+  }
+  52.94118% {
+    clip: rect(2px, 450px, 68px, 0);
+  }
+  58.82353% {
+    clip: rect(49px, 450px, 72px, 0);
+  }
+  64.70588% {
+    clip: rect(96px, 450px, 26px, 0);
+  }
+  70.58824% {
+    clip: rect(47px, 450px, 22px, 0);
+  }
+  76.47059% {
+    clip: rect(45px, 450px, 10px, 0);
+  }
+  82.35294% {
+    clip: rect(18px, 450px, 73px, 0);
+  }
+  88.23529% {
+    clip: rect(40px, 450px, 92px, 0);
+  }
+  94.11765% {
+    clip: rect(27px, 450px, 15px, 0);
+  }
+  100% {
+    clip: rect(50px, 450px, 88px, 0);
+  }
+}
+@keyframes example-one-anim-2 {
+  0% {
+    clip: rect(104px, 450px, 57px, 0);
+  }
+  5.88235% {
+    clip: rect(21px, 450px, 3px, 0);
+  }
+  11.76471% {
+    clip: rect(59px, 450px, 24px, 0);
+  }
+  17.64706% {
+    clip: rect(101px, 450px, 84px, 0);
+  }
+  23.52941% {
+    clip: rect(85px, 450px, 34px, 0);
+  }
+  29.41176% {
+    clip: rect(3px, 450px, 73px, 0);
+  }
+  35.29412% {
+    clip: rect(114px, 450px, 60px, 0);
+  }
+  41.17647% {
+    clip: rect(13px, 450px, 50px, 0);
+  }
+  47.05882% {
+    clip: rect(15px, 450px, 33px, 0);
+  }
+  52.94118% {
+    clip: rect(74px, 450px, 23px, 0);
+  }
+  58.82353% {
+    clip: rect(100px, 450px, 34px, 0);
+  }
+  64.70588% {
+    clip: rect(103px, 450px, 33px, 0);
+  }
+  70.58824% {
+    clip: rect(62px, 450px, 25px, 0);
+  }
+  76.47059% {
+    clip: rect(2px, 450px, 74px, 0);
+  }
+  82.35294% {
+    clip: rect(58px, 450px, 83px, 0);
+  }
+  88.23529% {
+    clip: rect(32px, 450px, 62px, 0);
+  }
+  94.11765% {
+    clip: rect(99px, 450px, 99px, 0);
+  }
+  100% {
+    clip: rect(98px, 450px, 34px, 0);
+  }
+}
+.example-one:before, .example-one:after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.0);
+  clip: rect(0, 0, 0, 0);
+}
+.example-one:after {
+  left: 2px;
+  text-shadow: -1px 0 #2e2e2e;
+  animation: example-one-anim-1 2s infinite linear alternate-reverse;
+}
+.example-one:before {
+  left: -2px;
+  text-shadow: 2px 0 rgb(95, 158, 160);
+  animation: example-one-anim-2 3s infinite linear alternate-reverse;
+}
+
+.wrap {
+  width: 400px;
+  height: 100px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
 }
