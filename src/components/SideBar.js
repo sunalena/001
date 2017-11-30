@@ -8,7 +8,7 @@ export default ({ getTimeTable }) => (
         <Branch
           key={0}
           id={0}
-          name={'Структура'}
+          name={'Факультеты'}
           isOpen={true}
           getTimeTable={getTimeTable}
         />
