@@ -3,6 +3,7 @@ html {
 }
 body {
   background-image: url('./112.png');
+  background-attachment: fixed;
   margin: 0;
   font-family: "PT Sans", Tahoma, Arial;
 }
