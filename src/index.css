@@ -1,13 +1,16 @@
+html {
+  margin: 0;
+}
 body {
   background-image: url('./112.png');
   margin: 0;
- font-family: "PT Sans", Tahoma, Arial;
+  font-family: "PT Sans", Tahoma, Arial;
 }
 .metro {
   list-style: none;
   padding: 0 0 60px 0;
   margin: 0px 0 0 50px;
-  border-left: 5px solid #778899;
+  border-left: 5px solid #2e2e2e;
   z-index: 1;
 }
 .metro:before {
@@ -15,7 +18,7 @@ body {
   list-style: none;
   padding: 0 0 100vh 0;
   margin: 0px 0 0 -5px;
-  border-left: 5px solid #778899;
+  border-left: 5px solid #2e2e2e;
   z-index: 0;
   display: block;
   position: absolute;
@@ -35,7 +38,7 @@ body {
   content: '';
   width: 5px;
   height: 28px;
-  background: #778899;
+  background: #2e2e2e;
   position: relative;
   display: block;
   left: -9px;
@@ -54,7 +57,7 @@ body {
 }
 .metro ul li {
   padding-bottom: 10px; 
-  border-left: 5px solid #778899;
+  border-left: 5px solid #2e2e2e;
 }
 .metro ul li:first-child {
   margin-top: -5px;
@@ -90,9 +93,12 @@ aside{
   width: 245px;
   overflow: hidden;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  color: #4e4e4e;
+  background: url('./112.png');
+
 }
 #menu_body {
-  background-color: #dcdcdc;
+  background: rgba(0,0,0,0.2);
   width: 260px;
   height: 90vh;
   overflow-x: auto;
@@ -131,7 +137,7 @@ background: rgba(207, 226, 233, 0.4);
 #menu_body footer{
   position: absolute;
   bottom: 0;
-  background: #708090;
+  background: #2e2e2e;
   margin: 0;
   padding: 10px 100px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
@@ -139,7 +145,7 @@ background: rgba(207, 226, 233, 0.4);
 #menu_body footer a{
   text-decoration: none;
   font-family: "PT Sans", Tahoma, Arial;
-  color:white;
+  color: rgb(95, 158, 160);
 }
 #menu_body footer a:hover{
   color: #eee;
@@ -149,15 +155,16 @@ header {
   font-family: "PT Sans", Tahoma, Arial;
   width: 100%;
   height: 10vh;
-  background-color: #708090;
+  background-color: #2e2e2e;
   font-size: 8vh;
+  margin: 0;
   z-index: 2;
   position: fixed;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
 }
 
 .head a {
-  color: #fff;
+  color: rgb(95, 158, 160);
   text-shadow: 1px 2px 3px rgba(0,0,0, 0.3);
   text-decoration: none;
   /* text-shadow: -1px -1px #FFF,
@@ -174,11 +181,29 @@ header {
   3px -3px 2px #BBB;
 color: steelblue;
 transition: all 1s; */
+margin-left: 100px;
 padding-left: 9px;
-font-family: 'Merriweather', serif;
+font-family: 'Lobster', cursive;
 font-size: 40px;
 }
 
+main{
+  position: absolute;
+  top: 10vh;
+  width: 60%;
+  height: 90vh;
+  margin: 0 10%;
+  border-left: 1px solid #999;
+  border-right: 1px solid #999;
+  background: rgba(0, 0, 0, 0.3);
+  color: #4e4e4e;
+  padding: 0 10%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+main h1 {
+  text-align: center;
+}
 th {
   border: none;
   padding: 4px;
@@ -186,9 +211,9 @@ th {
   font-weight: bold;
 }
 td {
-  border: 1px solid wheat;
-  border-radius: 8px;
-  background: #d3d3d3;
+  border: 0px;
+  border-radius: 4px;
+  background: rgba(0,0,0, 0.3);
   padding:6px 2px;
   font-family: 'Merriweather', serif;
   font-size: 13px;
@@ -197,22 +222,32 @@ td {
 
 table {
   /*background: linear-gradient(top right, white, #D3D3D3);*/
-  color: #191970;
+ 
+  background: rgba(236, 233, 224,0.3);
   font-size: 15px;
   border-collapse: separate;
   border-spacing: 4px;
-  background: #ece9e0;
-  color: #656665;
-  border: 16px solid #ece9e0;
-  border-radius: 20px;
+  color: #4e4e4e;
+  border: 0;
+  padding: 10px;
+  border-radius: 15px;
   margin:30px 50px;
   table-layout: fixed;
   display: block;
   position: relative;
   float: left;
   min-width: 370px;
-
+ max-width: 440px;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, .4);
+}
+
+table h2{
+  font-size: 30px;
+  font-family: 'Lobster', cursive;
+  margin: 0;
+  padding: 0 0 30px 0;
+  color: rgb(95, 158, 160);
+  text-shadow: 1px 1px 2px black, 0 0 1em white;
 }
 
 .week1{
@@ -221,13 +256,6 @@ table {
   left: 260px;
 }
 
-table h2{
-  font-size: 30px;
-  font-family: 'Lobster', cursive;
-  margin: 0;
-  color: rgb(95, 158, 160);
-  text-shadow: 1px 1px 2px black, 0 0 1em white;
-}
 
 .drop{
   z-index: 2;
@@ -235,6 +263,71 @@ table h2{
   position: fixed;
   cursor: pointer;
 }
+
+
+.drop a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(20%, 100%);
+  width: 60px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border: 2px solid rgb(95, 158, 160);
+  border-radius: 3px;
+  font-size: 14px;
+  color: rgb(95, 158, 160);
+  transition: 0.5s;
+  overflow: hidden;
+}
+.drop a:hover {
+  color: #2e2e2e;
+}
+.drop a span {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(95, 158, 160, 0.5);
+  transition: 0.5s;
+  z-index: -1;
+}
+.drop a span:nth-child(1) {
+  top: -100%;
+  left: -100%;
+}
+.drop a:hover span:nth-child(1) {
+  top: 0;
+  left: 0;
+}
+.drop a span:nth-child(2) {
+  bottom: -100%;
+  left: -100%;
+}
+.drop a:hover span:nth-child(2) {
+  bottom: 0;
+  left: 0;
+}
+.drop a span:nth-child(3) {
+  top: -100%;
+  right: -100%;
+}
+.drop a:hover span:nth-child(3) {
+  top: 0;
+  right: 0;
+}
+.drop a span:nth-child(4) {
+  bottom: -100%;
+  right: -100%;
+}
+.drop a:hover span:nth-child(4) {
+  bottom: 0;
+  right: 0;
+}
+
 
 
 @media screen and (max-width: 1880px){
@@ -316,79 +409,40 @@ table h2{
 
 @media screen and (max-width: 725px){
   table {
-    margin: 20px 5px 0 0;
+    margin: 0 5px 20px 0;
   }
 }
 
-@media screen and (max-width: 690px) {
+@media screen and (max-width: 700px){
+  main{
+  width: 80%;
+  margin: 0;
+  padding: 0 10%;
+  }
+  .week1{
+    left: 0px;
+    padding: 0 10%;
+  }
   .head a{
     font-size: 25px;
   }
-  .metro {
-    margin: 0px 0 0 10px;
-  }
-  #menu_body {
-    width: 210px;
-  }
-  aside {
-    width: 195px;
-  }
+}
+@media screen and (max-width: 550px){
   .week1{
-    left: 210px;
-  }
-  table {
-    border: 0;
-  }
-
-
-  table caption {
-    font-size: 1.3em;
-
-  }
-  table thead {
-    display: none;
-  }
-  table tr {
-    border-bottom: 3px solid #ddd;
-    display: block;
-    margin-bottom: .625em;
-  }
-  table td {
-    border-bottom: 1px solid #ddd;
-    display: block;
-    font-size: .8em;
-    text-align: right;
-    width: 370px;
-  }
-  table td:before {
-    content: attr(aria-label);
-    float: left;
-    font-weight: bold;
-    text-transform: uppercase;
-  }
-  table td:last-child {
-    border-bottom: 0;
-  }
-
-  tr .ti::after{
-    content: "Время";
-    float: left;
-  }
-  tr .di::after{
-    content: "Дисциплина";
-    float: left;
-  }
-  tr .cl::after{
-    content: "№ кабинета";
-    float: left;
-  }
-  tr .te::after{
-    content: "Преподаватель";
-    float: left;
+    left: 0px;
+    padding: 0 5%;
   }
 }
 
-@media screen and (max-width: 600px){
+
+@media screen and (max-width: 490px){
+  .week1{
+    left: 0px;
+    padding: 0 2%;
+  }
+}
+
+@media screen and (max-width: 480px){
   table td {
     width: 300px;
   }
@@ -397,67 +451,26 @@ table h2{
     min-width: 200px;
   }
 }
+@media screen and (max-width: 433px){
+  table{
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 398px){
+  table{
+    font-size: 10px;
 
-@media screen and (max-width: 530px){
+  }
   table td {
-    width: 240px;
-  }
-}
-
-@media screen and (max-width: 470px){
-  table td {
-    width: 200px;
-  }
-}
-
-@media screen and (max-width: 440px){
-
-  #menu_body {
-    width: 180px;
-    font-size: 14px;
-  }
-  aside {
-    width: 165px;
-  }
-  .week1{
-    left: 180px;
-  }
-}
-
-@media screen and (max-width: 400px){
-  .metro {
-    margin: 0 0 0 -15px;
-  }
-  #menu_body {
-    width: 150px;
-    font-size: 12px;
-
-  }
-  aside {
-    width: 135px;
-  }
-  .week1{
-    left: 150px;
-  }
-}
-
-@media screen and (max-width: 370px) {
-  #menu_body {
-    height: 95vh;
+    width: 260px;
 
   }
 }
-@media screen and (max-width: 350px) {
-  #menu_body {
-    height: 100vh;
-
+@media screen and (max-width: 355px){
+    table thead {
+    display: none;
   }
-}
-
-@media screen and (max-width: 320px) {
-  #menu_body {
-    height: 106vh;
-
+  .head a {
+    margin-left: 80px;
   }
-
 }
