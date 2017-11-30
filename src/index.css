@@ -518,6 +518,9 @@ table h2{
   color: #4e4e4e;
   position: relative;
   font-weight: bold;
+  max-width: 450px;
+  text-align: center;
+  margin: 0 auto;
 }
 @keyframes example-one-anim-1 {
   0% {
@@ -651,10 +654,8 @@ table h2{
   animation: example-one-anim-2 3s infinite linear alternate-reverse;
 }
 
-.wrap {
-  width: 400px;
-  height: 100px;
-  margin: 0 auto;
-  text-align: center;
-  position: relative;
+@media screen and (max-width: 490px){
+.example-one {
+  font-size: 30px;
+}
 }
