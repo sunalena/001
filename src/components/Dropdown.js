@@ -27,7 +27,7 @@ class Dropdown extends Component {
           transitionLeaveTimeout={1000}>
 
           {this.state.isOpened && (
-            <SideBar getTimeTable={this.props.getTimeTable} getStartPage={this.props.getStartPage}/>
+            <SideBar getTimeTable={this.props.getTimeTable}/>
           )}
           
         </CSSTransitionGroup>
