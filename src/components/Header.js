@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default () => (
+export default ({ getStartPage })=> (
   <header>
     <div className="head">
-      <a href="index.html" title="Главная">
+      <a onClick={getStartPage} title="Главная">
         Расписание ПГУ!
       </a>
     </div>
