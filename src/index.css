@@ -4,6 +4,7 @@ html {
 body {
   background-image: url('./112.png');
   background-attachment: fixed;
+  background-size: cover; 
   margin: 0;
   font-family: "PT Sans", Tahoma, Arial;
 }
@@ -219,6 +220,12 @@ td {
   padding:6px 2px;
   font-family: 'Merriweather', serif;
   font-size: 13px;
+}
+
+td div{
+  max-width: 100px;
+  height: 35px;
+  overflow: hidden;
 }
 
 table {
@@ -501,7 +508,7 @@ table h2{
 
 .opasweek-enter.opasweek-enter-active {
   opacity: 1;
-  transition: opacity 500ms ease-in;
+  transition: opacity 300ms ease-in;
 }
 
 .opasweek-leave {
@@ -660,3 +667,5 @@ table h2{
   font-size: 30px;
 }
 }
+
+
