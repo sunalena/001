@@ -222,10 +222,10 @@ td {
   font-size: 13px;
 }
 
-td div{
-  max-width: 100px;
-  height: 35px;
-  overflow: hidden;
+td div {
+  max-width: 110px;
+  height: 40px;
+  overflow: auto;
 }
 
 table {
@@ -667,5 +667,3 @@ table h2{
   font-size: 30px;
 }
 }
-
-
