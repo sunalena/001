@@ -3,9 +3,9 @@ import React from 'react'
 const Lesson = ({ time, discipline, classroom, teacher }) => (
   <tr>
     <td className="ti">{time}</td>
-    <td className="di">{discipline}</td>
+    <td className="di"><div>{discipline}</div></td>
     <td className="cl">{classroom}</td>
-    <td className="te">{teacher}</td>
+    <td className="te"><div>{teacher}</div></td>
   </tr>
 )
 
