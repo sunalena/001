@@ -36,7 +36,7 @@ export default class Branch extends PureComponent {
         </a>
         <CSSTransitionGroup 
           transitionName="opasweek"
-          transitionEnterTimeout={500}
+          transitionEnterTimeout={300}
           transitionLeaveTimeout={300}>
 
         {this.state.isOpen && type !== 'group' ? (
