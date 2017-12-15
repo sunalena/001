@@ -25,7 +25,7 @@ export default class App extends Component {
         <Header getStartPage={this.getStartPage}/>
         {!this.state.groupId ? 
           <StartPage /> 
-          : <div className="week1"><Week groupId={this.state.groupId} /></div>}
+        : <div className="week1 cards"><Week groupId={this.state.groupId} /></div>}
         <Dropdown getTimeTable={this.getTimeTable}/>
       </div>
     );
