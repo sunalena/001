@@ -108,8 +108,8 @@ aside{
 }
 /* Let's get this party started */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 0px;
+  width: 5px;
+  
 }
 ::-webkit-resizer{ 
   background-repeat:no-repeat; 
@@ -128,7 +128,7 @@ aside{
 ::-webkit-scrollbar-thumb {
   -webkit-border-radius: 10px;
   border-radius: 10px;
-  background: rgba(111, 150, 204, 0.8); 
+  background: rgba(175, 185, 175, 0.562); 
   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
  
 }
@@ -221,16 +221,26 @@ td {
   font-family: 'Merriweather', serif;
   font-size: 13px;
 }
-
+td:first-child{
+  width: 76px;
+}
+td:last-child{
+  width: 210px;
+  min-width: 210px;
+}
 td div {
-  max-width: 110px;
-  height: 40px;
+  max-width: 210px;
   overflow: auto;
+}
+.classroom {
+  font-weight: bold;
+}
+.teacher {
+  font-style: italic;
 }
 
 table {
-  background: -moz-linear-gradient(#D0ECF4, rgb(83, 106, 110), #D0ECF4);
-  background: -webkit-gradient(linear, 0 0, 0  100%, from(rgb(217, 243, 250)), to(#D0ECF4), color-stop(0.5, rgb(93, 112, 116)));
+  background:rgba(0, 0, 0, .0);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00BBD6', endColorstr='#EBFFFF');
   font-size: 15px;
   border-collapse: separate;
@@ -239,31 +249,46 @@ table {
   border: 0;
   padding: 10px;
   border-radius: 15px;
+  table-layout: fixed;
+  display: block;
+  min-width: 310px;
+  max-width: 440px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, .4);
+  
+}
+
+
+.dropTable{
+  background: -moz-linear-gradient(#D0ECF4, rgb(83, 106, 110), #D0ECF4);
+  background: -webkit-gradient(linear, 0 0, 0  100%, from(rgb(217, 243, 250)), to(#D0ECF4), color-stop(0.5, rgb(93, 112, 116)));
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00BBD6', endColorstr='#EBFFFF');
+  border-collapse: separate;
+  border-spacing: 4px;
+  border: 0;
+  border-radius: 15px;
   margin:30px 50px;
   table-layout: fixed;
   display: block;
   position: relative;
   float: left;
-  min-width: 370px;
-  max-width: 440px;
+  min-width: 310px;
+  max-width: 410px;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, .4);
-}
-
-table h2{
-  font-size: 30px;
+  font-size: 25px;
   font-family: 'Lobster', cursive;
-  margin: 0;
-  padding: 0 0 15px 0;
+  cursor: pointer;
   color: rgb(95, 158, 160);
-  text-shadow: 1px 1px 2px black, 0 0 1em white;
 }
 
+.dropTable h2{
+  text-align: center;
+  text-shadow: 1px 1px 2px black, 0 0 2em white;
+}
 .week1{
   position: absolute;
   top: 90px;
   left: 260px;
 }
-
 
 .drop{
   z-index: 2;
@@ -338,84 +363,84 @@ table h2{
 
 
 @media screen and (max-width: 1880px){
-  table {
+  .dropTable {
     margin: 40px;
   }
 }
 
 @media screen and (max-width: 1820px){
-  table {
+  .dropTable {
     margin: 25px;
   }
 }
 
 @media screen and (max-width: 1732px){
-  table {
+  .dropTable {
     margin: 15px;
   }
 }
 
 @media screen and (max-width: 1674px){
-  table {
+  .dropTable {
     margin: 40px 100px;
   }
 }
 
 @media screen and (max-width: 1545px){
-  table {
+  .dropTable {
     margin: 40px 70px;
   }
 }
 
 @media screen and (max-width: 1423px){
-  table {
+  .dropTable {
     margin: 50px;
   }
 }
 
 @media screen and (max-width: 1345px){
-  table {
+  .dropTable {
     margin: 30px;
   }
 }
 
 @media screen and (max-width: 1250px){
-  table {
+  .dropTable {
     margin: 5px;
   }
 }
 @media screen and (max-width: 1200px){
-  table {
+  .dropTable {
     margin: 40px 170px;
   }
 }
 
 @media screen and (max-width: 1100px){
-  table {
+  .dropTable {
     margin: 40px 150px;
   }
 }
 
 @media screen and (max-width: 990px){
-  table {
+  .dropTable {
     margin: 40px 70px;
   }
 }
 
 @media screen and (max-width: 845px){
-  table {
+  .dropTable {
     margin: 40px;
   }
 }
 
 @media screen and (max-width: 770px){
-  table {
+  .dropTable {
     margin: 20px;
   }
 }
 
 @media screen and (max-width: 725px){
-  table {
+  .dropTable {
     margin: 0 5px 20px 0;
   }
 }
@@ -454,8 +479,11 @@ table h2{
     width: 300px;
   }
 
-  table{
+  table {
     min-width: 200px;
+  }
+  .dropTable {
+    min-width: 300px;
   }
 }
 @media screen and (max-width: 433px){
@@ -508,7 +536,7 @@ table h2{
 
 .opasweek-enter.opasweek-enter-active {
   opacity: 1;
-  transition: opacity 300ms ease-in;
+  transition: opacity 500ms ease-in;
 }
 
 .opasweek-leave {
@@ -519,7 +547,6 @@ table h2{
   opacity: 0.01;
   transition: opacity 300ms ease-in;
 }
-
 
 .example-one {
   font-size: 40px;
