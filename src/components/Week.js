@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { CSSTransitionGroup } from 'react-transition-group'
 
 import Day from './Day'
 
@@ -30,8 +31,16 @@ export default class Week extends Component {
 
   render() {
     const { groupTimeTable } = this.state
-    return groupTimeTable && groupTimeTable.days
-      ? groupTimeTable.days.map(itemToDay)
-      : null
+    return (
+      <CSSTransitionGroup
+        transitionName="opasweek"
+        transitionEnterTimeout={500}
+        transitionLeaveTimeout={300}
+      >
+        {groupTimeTable && groupTimeTable.days
+          ? groupTimeTable.days.map(itemToDay)
+          : null}
+      </CSSTransitionGroup>
+    )
   }
 }

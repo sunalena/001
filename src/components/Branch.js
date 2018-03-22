@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react'
+import { CSSTransitionGroup } from 'react-transition-group'
 
 const uri = window.location.origin
 
@@ -30,9 +31,15 @@ export default class Branch extends PureComponent {
         <a id={id} type={type} role="button" onClick={this.handleClick}>
           {name}
         </a>
-        {this.state.isOpen && type !== 'group' ? (
-          <ul id={id}>{this.state.children.map(this.elToLink)}</ul>
-        ) : null}
+        <CSSTransitionGroup
+          transitionName="opasweek"
+          transitionEnterTimeout={300}
+          transitionLeaveTimeout={300}
+        >
+          {this.state.isOpen && type !== 'group' ? (
+            <ul id={id}>{this.state.children.map(this.elToLink)}</ul>
+          ) : null}
+        </CSSTransitionGroup>
       </li>
     )
   }
