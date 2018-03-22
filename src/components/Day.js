@@ -33,7 +33,7 @@ class DropTable extends Component {
   }
 
   render() {
-    const { id, day, lessons } = this.props
+    const { day, lessons } = this.props
     return (
       <div onClick={this.toggleState} className="dropTable">
         <h2> {day}</h2>

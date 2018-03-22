@@ -14,21 +14,22 @@ class Dropdown extends Component {
       <div>
         <div onClick={this.toggleState} className="drop">
           <a>
-            <span />
-            <span />
-            <span />
-            <span />
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
             меню
           </a>
-        </div>
-        <CSSTransitionGroup
+      </div>
+        <CSSTransitionGroup 
           transitionName="dropdownMenu"
           transitionEnterTimeout={1000}
-          transitionLeaveTimeout={1000}
-        >
+          transitionLeaveTimeout={1000}>
+
           {this.state.isOpened && (
-            <SideBar getTimeTable={this.props.getTimeTable} />
+            <SideBar getTimeTable={this.props.getTimeTable}/>
           )}
+          
         </CSSTransitionGroup>
       </div>
     )
