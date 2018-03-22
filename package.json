@@ -6,7 +6,8 @@
     "json-server": "^0.12.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "react-scripts": "1.0.17"
+    "react-scripts": "1.0.17",
+    "react-transition-group": "1.2.1"
   },
   "scripts": {
     "start-server": "node server",
